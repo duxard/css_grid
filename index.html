@@ -7,10 +7,14 @@
     .wrapper {
       display: grid;
       grid-template-columns: 70% 30%;
+      grid-column-gap: .5rem;
+      grid-row-gap: .5rem;
+      /* shorthand: grid-gap */
     }
     
     .wrapper > div {
       background: #eee;
+      padding: .5rem;
     }
     .wrapper > div:nth-child(odd) {
       background: #ddd;
