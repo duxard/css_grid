@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: .4rem;
+
+      justify-items: stretch; /*  start, center, end, stretch (def)  */
+      align-items: stretch;  /*  start, center, end, stretch (def)  */
+    }
+
+    .box1 {
+      align-self: start;
+    }
+
+    .box2 {
+      align-self: end;
+    }
+
+    .box3 {
+      justify-self: end;
+    }
+
+    .box4 {
+      align-self: start;
+    }
+
+    /* Style for illustrative purposes only: */
+    .wrapper > div {
+      background: #eee;
+      padding: .5rem;
+    }
+    .wrapper > div:nth-child(odd) {
+      background: #ddd;
+    }
+    div:not(.wrapper) {
+      outline: 1px dashed #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+  </div>
+</body>
+</html>
