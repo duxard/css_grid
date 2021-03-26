@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .grid {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(4, 1fr); /* there will be 4 coulmns */
+      grid-template-rows: repeat(3, 150px);  /* the rule is for the first 3 columns */
+    }
+
+    .grid div:nth-child(1) {
+      /* Long notations:
+      grid-column-start: 1;
+      grid-column-end: -1; OR: grid-column-end: 5 */
+
+      /* SHortcut for theprevious two records: */
+      grid-column: 1 / -1; /* position: occupies the whole row (all 4 columns) */
+      grid-row: 2;         /* start position: row#2 */
+    }
+
+    .grid div:nth-child(2) {
+      grid-column: 1; /* start position: column#1 */
+      grid-row: 1;    /* start position: row#1 */
+    }
+
+    .grid div:nth-child(3) {
+      grid-column: 2/4; /* start position: column#1, end position: column#4 */
+      grid-row: 1;      /* start position: row#1 */
+    }
+    /*************************************************************************/
+    .grid div {
+      background-color: #28314E;
+      border: 1px solid #212941;
+      border-radius: 5px;
+      padding: 8px 15px;
+      color: #ffffff;
+      font-size: 18px;
+      font-family: roboto;
+    }
+
+    .grid div:nth-child(odd) {
+      background-color: #475477;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div>item-1</div>
+    <div>item-2</div>
+    <div>item-3</div>
+    <div>item-4</div>
+    <div>item-5</div>
+    <div>item-6</div>
+    <div>item-7</div>
+    <div>item-8</div>
+    <div>item-9</div>
+    <div>item-10</div>
+  </div>
+</body>
+</html>
